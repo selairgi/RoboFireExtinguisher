@@ -564,31 +564,32 @@ int main(int argc, char* argv[])
     perser(argv[1],map);
 // --------------initiation robot et taille max feu -----------------
     SDL_Init(SDL_INIT_VIDEO);
-    printf("Choisir l'abscisse x < %d ou vous voulez placer votre robot, attention au dimensions de la carte : \n",ncolones-1);
-    scanf("%d", &abscisse);
-    printf("Choisir l'ordonné y < %d ou vous voulez placer votre robot : \n", nlignes-1);
-    scanf("%d", &ordonee);
-    while(map[abscisse][ordonee] == 0){
-        printf("c'est une case d'eau , rechoisir les dimensions \n");
-        printf("Choisir l'abscisse x < %d ou vous voulez placer votre robot, attention au dimensions de la carte : \n",ncolones-1);
-        scanf("%d", &abscisse);
-        printf("Choisir l'ordonné y < %d ou vous voulez placer votre robot : \n", nlignes-1);
-        scanf("%d", &ordonee);
-    }
-    printf("Choisir la capacite maximale du robot : \n");
-    scanf("%d", &capacite);
-    printf("Choisir combien d'eau contient : \n");
-    scanf("%d", &contenu);
-    printf("Choisir son debit de remplissage / vidage d'eau : \n");
-    scanf("%d", &debit);
-    printf("Choisir sa vitesse (case/s) dans la foret : \n");
-    scanf("%d", &v_foret);
-    printf("Choisir sa vitesse (case/s) dans la montagne : \n");
-    scanf("%d", &v_montagne);
-    printf("Choisir sa vitesse (case/s) dans la ville : \n");
-    scanf("%d", &v_ville);
-    printf("Choisir la taille maximale que peut le feu avoir, attention au capacite max du robot : \n");
-    scanf("%d", &taille_max);
+	printf("Enter the x-coordinate (less than %d) where you want to place your robot, considering the map dimensions:\n", ncolones - 1);
+	scanf("%d", &abscisse);
+	printf("Enter the y-coordinate (less than %d) where you want to place your robot:\n", nlignes - 1);
+	scanf("%d", &ordonee);
+	while (map[abscisse][ordonee] == 0) {
+	    printf("This is a water tile. Please choose different coordinates.\n");
+	    printf("Enter the x-coordinate (less than %d) where you want to place your robot, considering the map dimensions:\n", ncolones - 1);
+	    scanf("%d", &abscisse);
+	    printf("Enter the y-coordinate (less than %d) where you want to place your robot:\n", nlignes - 1);
+	    scanf("%d", &ordonee);
+	}
+	printf("Enter the maximum capacity of the robot:\n");
+	scanf("%d", &capacite);
+	printf("Enter the current water content of the robot:\n");
+	scanf("%d", &contenu);
+	printf("Enter the water filling/draining rate of the robot:\n");
+	scanf("%d", &debit);
+	printf("Enter the speed of the robot (cells/second) in the forest:\n");
+	scanf("%d", &v_foret);
+	printf("Enter the speed of the robot (cells/second) in the mountains:\n");
+	scanf("%d", &v_montagne);
+	printf("Enter the speed of the robot (cells/second) in the city:\n");
+	scanf("%d", &v_ville);
+	printf("Enter the maximum size the fire can have, considering the robot's maximum capacity:\n");
+	scanf("%d", &taille_max);
+
     //---------------creer window et renderer-------------------
     SDL_Window* window = SDL_CreateWindow("Map", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, map_pixel_width, map_pixel_height, 0);
     if (window == NULL) {
