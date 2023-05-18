@@ -15,6 +15,19 @@ To generate a map, the user has the option to create a file manually or use the 
           gcc -o gen genere_carte.c
           ./gen "filename.txt"
 
+ # Note: SDL Library Required
+
+Please note that in order to run the RoboFireExtinguisher project, the SDL (Simple DirectMedia Layer) library is required. SDL is used for graphics rendering and image loading functionalities in the program. Before running the project, make sure that SDL2 and SDL2_image libraries are properly installed on your system.
+
+To install SDL on Ubuntu, you can use the following command:
+
+
+sudo apt-get install libsdl2-dev
+
+For other operating systems, please refer to the official SDL documentation for installation instructions.
+
+Once SDL is installed, you can follow the steps :
+
 # Running the Robot Program
 
 To execute the robot program, the user needs to enter the following command:
