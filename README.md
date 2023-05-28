@@ -6,14 +6,16 @@ RoboFireExtinguisher is a project that simulates the task of a robotic fire exti
 
 The program is a basic simulation of a robot's task. It starts by generating a random map represented as a matrix. The fire is also randomly generated and represented by its position (x, y) and size.
 
-The robot first checks if it has enough water to extinguish the fire. If it has enough water, it determines the shortest path to reach the fire and extinguish it. If the robot does not have enough water, it searches for the nearest water tile, moves to it, fills up with water, and then returns to extinguish the fire.
-Generating a Map: 
+The robot first checks if it has enough water to extinguish the fire. If it has enough water, it determines the shortest path to reach the fire and extinguish it. If the robot does not have enough water, it searches for the nearest water tile, moves to it, fills up with water, and then returns to extinguish the fire. 
           0 : water
           1 : mountain
           2 : forest
           3 : city
 
-          ![Alt Text](RoboFireExtinguisher/pr.png)
+          ![Alt Text](pr.png)
+
+
+# Generating a Map:
 
 To generate a map, the user has the option to create a file manually or use the "genere_carte.c" program that creates a random map. The commands to generate the map are as follows:
 
