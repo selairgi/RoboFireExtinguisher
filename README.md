@@ -7,7 +7,13 @@ RoboFireExtinguisher is a project that simulates the task of a robotic fire exti
 The program is a basic simulation of a robot's task. It starts by generating a random map represented as a matrix. The fire is also randomly generated and represented by its position (x, y) and size.
 
 The robot first checks if it has enough water to extinguish the fire. If it has enough water, it determines the shortest path to reach the fire and extinguish it. If the robot does not have enough water, it searches for the nearest water tile, moves to it, fills up with water, and then returns to extinguish the fire.
-Generating a Map
+Generating a Map: 
+          0 : water
+          1 : mountain
+          2 : forest
+          3 : city
+
+          ![Alt Text](RoboFireExtinguisher/pr.png)
 
 To generate a map, the user has the option to create a file manually or use the "genere_carte.c" program that creates a random map. The commands to generate the map are as follows:
 
@@ -22,7 +28,7 @@ Please note that in order to run the RoboFireExtinguisher project, the SDL (Simp
 To install SDL on Ubuntu, you can use the following command:
 
 
-sudo apt-get install libsdl2-dev
+          sudo apt install libsdl2-2.0-0 libsdl2-gfx-1.0-0 libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0 libsdl2-ttf-2.0-0
 
 For other operating systems, please refer to the official SDL documentation for installation instructions.
 
