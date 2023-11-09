@@ -11,7 +11,7 @@ The robot first checks if it has enough water to extinguish the fire. If it has 
           1 : mountain <br>
           2 : forest <br>
           3 : city <br>
-          ![](pr.png)
+          ![](pics/pr.png)
 
 
 # Generating a Map:
