@@ -637,7 +637,7 @@ int main(int argc, char* argv[])
         SDL_Delay(10);
         
         }
-// ------------------Clean--------------------up
+// ------------------Clean-up----------------
     SDL_RenderPresent(renderer);
     for (int y = 0; y < nlignes; y++) {
         free(map[y]);
